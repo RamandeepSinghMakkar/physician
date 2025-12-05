@@ -12,6 +12,8 @@ instance/
 
 # Local environment variables / API keys
 .env
+.env
+*.env
 
 # OS files
 .DS_Store
