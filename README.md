@@ -56,7 +56,8 @@ In this project, we used:
 - **Intent Detection:** Extracted detailed patient intent via **Groq Llama 3.3 JSON output**.
 
 <img width="710" alt="image" src="https://github.com/user-attachments/assets/1955293a-79b4-42b0-b69b-e7d67fa4c6ad" />
- Sample Video: https://github.com/user-attachments/assets/5c9527e0-b193-442f-9e3b-fc09fa52357e
+
+Sample Video: https://github.com/user-attachments/assets/5c9527e0-b193-442f-9e3b-fc09fa52357e
 
 
 
