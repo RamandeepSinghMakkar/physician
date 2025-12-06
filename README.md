@@ -18,18 +18,9 @@ For reference:
 For given sample text in the Assignment:  
 <img width="638" alt="image" src="https://github.com/user-attachments/assets/e27ebb3d-56df-4924-9158-6fc0376fdcf8" />
 
-```bash
-Suppose for given text:
-Patient – Good afternoon, Doctor.
-Doctor – Good afternoon Rahul. How can I assist you today?
-Patient – I have been feeling constantly thirsty and tired recently. I also noticed that I have been losing weight without any effort.
-Doctor – I see. Let's run some tests to find out what's going on. It could be diabetes, but we need to confirm it.
-Patient – I understand, doctor. I'll await the test results.
-Doctor – Good. In the meantime, try to eat a balanced diet and get regular exercise. These are good practices whether you have diabetes or not.
-Patient – I will do my best, doctor. Thank you.
-Doctor – You're welcome. Take care.
-```
-Output: 
+
+Sample Video:  https://github.com/user-attachments/assets/9ce02d77-564b-4377-8a38-a81c8f1b3641
+
 
 ---
 
@@ -65,6 +56,8 @@ In this project, we used:
 - **Intent Detection:** Extracted detailed patient intent via **Groq Llama 3.3 JSON output**.
 
 <img width="710" alt="image" src="https://github.com/user-attachments/assets/1955293a-79b4-42b0-b69b-e7d67fa4c6ad" />
+ Sample Video: https://github.com/user-attachments/assets/5c9527e0-b193-442f-9e3b-fc09fa52357e
+
 
 
 ---
@@ -98,7 +91,7 @@ Well-annotated clinical datasets often used in academia.
 Large publicly available de-identified ICU datasets from MIT.
 5) **MedDialog Dataset (for patient-doctor dialogues):**  
 Very helpful for intent and sentiment extraction from real dialogues.
-
+ 
 ---
 
 ## **3️⃣ SOAP Note Generation (Bonus)**
@@ -111,17 +104,8 @@ Very helpful for intent and sentiment extraction from real dialogues.
 For given sample text in the Assignment:  
 <img width="589" alt="image" src="https://github.com/user-attachments/assets/f3da0c56-0b3b-4903-a59b-6e241e362339" />
 
-```bash
-Suppose for given text:
-Patient – Good afternoon, Doctor.
-Doctor – Good afternoon Rahul. How can I assist you today?
-Patient – I have been feeling constantly thirsty and tired recently. I also noticed that I have been losing weight without any effort.
-Doctor – I see. Let's run some tests to find out what's going on. It could be diabetes, but we need to confirm it.
-Patient – I understand, doctor. I'll await the test results.
-Doctor – Good. In the meantime, try to eat a balanced diet and get regular exercise. These are good practices whether you have diabetes or not.
-Patient – I will do my best, doctor. Thank you.
-Doctor – You're welcome. Take care.
-```
+
+Sample Video: https://github.com/user-attachments/assets/30dd3f75-b440-409a-ad2d-dae4ad775d5e
 
 
 ### QUES-1 **How would you train an NLP model to map medical transcripts into SOAP format?**
