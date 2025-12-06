@@ -1,6 +1,6 @@
 # 🩺 **Medical NLP Application**
 
-**Live Link:** [https://medical-ramandeepemitrr.streamlit.app](https://medical-ramandeepemitrr.streamlit.app)
+**Live Link:** [https://physician-ramandeep.streamlit.app](https://physician-ramandeep.streamlit.app)
 
 > **Note:** The app may sleep due to inactivity (because I am using a free tier). Please activate it and then refresh the page after 2 minutes.
 
@@ -10,7 +10,7 @@
 
 **Task:** Implement an NLP pipeline to **extract medical details** from the transcribed conversation.
 
-- **NER:** Implemented using **Gemini 2.5 Flash Lite** for highly accurate extraction.
+- **NER:** Implemented using **Groq Llama 3.3 70B** for highly accurate extraction.
 - **Keyword Extraction:** Done using **spaCy** and **KeyBERT** (sentence-transformers model used).
 - **Summarization:** Done using **BART (facebook/bart-large-cnn)** Transformer-based summarization.
 
@@ -38,11 +38,11 @@ Output:
 We handle ambiguous or missing medical data in multiple ways:
 
 1) **LLM Function Calling:**  
-By using **Gemini models with structured output**, we allow the model to reason and return structured outputs even with partial or incomplete information. If any field is missing, we receive empty fields through our defined function structure.
+By using **Groq Llama 3.3 with JSON mode**, we allow the model to reason and return structured outputs even with partial or incomplete information. If any field is missing, we receive empty fields through our defined function structure.
 2) **Post-Processing:**  
 In our code, we use normalization functions like `normalize_ner_structure()` and `empty_ner_structure()` to handle cases where the API may return incomplete or malformed data.
 3) **Few-shot learning capability of LLM:**  
-Large models like **Gemini 1.5 Flash** can infer contextually missing data based on overall conversation, improving robustness.
+Large models like **Llama 3.3 70B** can infer contextually missing data based on overall conversation, improving robustness.
 4) **Default fallback structure:**  
 We return consistent empty data structures for missing fields, ensuring downstream processes don’t fail.
 
@@ -61,8 +61,8 @@ In this project, we used:
 
 **Task:** Implement sentiment analysis to detect patient concerns and reassurance needs.
 
-- **Sentiment Classification:** We used **Gemini 2.5 Flash Lite** to classify into **Anxious, Neutral, Reassured**.
-- **Intent Detection:** Extracted detailed patient intent via **Gemini structured output**.
+- **Sentiment Classification:** We used **Groq Llama 3.3 70B** to classify into **Anxious, Neutral, Reassured**.
+- **Intent Detection:** Extracted detailed patient intent via **Groq Llama 3.3 JSON output**.
 
 <img width="710" alt="image" src="https://github.com/user-attachments/assets/1955293a-79b4-42b0-b69b-e7d67fa4c6ad" />
 
@@ -105,7 +105,7 @@ Very helpful for intent and sentiment extraction from real dialogues.
 
 **Task:** Implement an AI model that converts transcribed text into a structured **SOAP note format**.
 
-- Full structured SOAP generation using **Gemini 1.5 Flash**.
+- Full structured SOAP generation using **Groq Llama 3.3 70B**.
 - Logical mappings into **Subjective, Objective, Assessment, Plan** implemented using the returned function call output.
 
 For given sample text in the Assignment:  
@@ -134,7 +134,7 @@ There are two possible approaches:
 - This helps the model learn how to segment conversation flow into **Subjective, Objective, Assessment, Plan**.
 
 #### **Approach 2: Rule-based + Prompt Engineering (our current solution)**
-- Use few-shot prompting with **Gemini 2.5 Flash Lite**.
+- Use few-shot prompting with **Groq Llama 3.3 70B**.
 - Provide explicit function calling with predefined JSON schemas.
 - Allow the model to structure output directly into SOAP format even without fine-tuning.
 
@@ -160,7 +160,7 @@ There are two possible approaches:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/RamandeepSinghMakkar/medical.git
+git clone https://github.com/RamandeepSinghMakkar/physician.git
 ```
 
 ### 2. Create a Virtual Environment
@@ -177,10 +177,10 @@ pip install -r requirements.txt
 ### 4. Setup Environment Variables
 
 - Create a `.env` file in the root directory.
-- Add your **Google API key** inside the `.env` file like this:
+- Add your **Groq API key** inside the `.env` file like this:
  
  ```bash
- GOOGLE_API_KEY=your_google_api_key_here
+ GROQ_API_KEY=your_groq_api_key_here
  ```
 
 ### 5. Run the Application:
